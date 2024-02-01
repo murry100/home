@@ -1,0 +1,43 @@
+{
+	"manifest_version": 3,
+	"name": "Chrome demo",
+	"version": "1.0",
+	"description": "demo",
+	"author": "s",
+	"icons": {
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"action": {
+    "default_icon": {
+			"48": "icon.png",
+			"128": "icon.png"
+    },
+    "default_title": "demo",
+    "default_popup": "popup.html"
+  },
+	"content_scripts": [
+		{
+			"matches": [
+				"https://aws.amazon.com/*"
+			],
+			"js": [
+				"content-script.js"
+			]
+		}
+	],
+	"host_permissions": [
+		"<all_urls>"
+	],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+		"activeTab",
+    "webRequest",
+    "storage"
+  ],
+	"background": {
+		"service_worker": "background.js"
+	}
+}

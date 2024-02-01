@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>popup</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body style="width:400px;height:400px;">
+	<div id="loginPanel" class="container">
+		<div class="loginBox">
+			<h2>Login</h2>
+			<form>
+				<div class="userBox">
+					<input id="account" type="text" name={username} autoComplete="off" required/>
+					<label>Username</label>
+				</div>
+				<div class="userBox">
+					<input id="password" type="password" name={password} autoComplete="off" required/>
+					<label>Password</label>
+				</div>
+				<a id="loginBtn">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					ログイン
+				</a>
+			</form>
+		</div>
+	</div>
+	<div style="padding: 5px;display: none;flex-wrap: wrap;overflow: auto;" id="menuPanel">
+		<div id="awsBtn" style="user-select: none;cursor: pointer;width: 87.5px;height: 87.5px;margin: 4px;background-color: antiquewhite;border: 1px solid lightgray;border-radius: 10px;text-align: center;line-height: 87.5px;">AWS</div>
+		<div style="user-select: none;cursor: pointer;width: 87.5px;height: 87.5px;margin: 4px;background-color: antiquewhite;border: 1px solid lightgray;border-radius: 10px;text-align: center;line-height: 87.5px;">Azure</div>
+		<div style="user-select: none;cursor: pointer;width: 87.5px;height: 87.5px;margin: 4px;background-color: antiquewhite;border: 1px solid lightgray;border-radius: 10px;text-align: center;line-height: 87.5px;">Salesforce</div>
+	</div>
+	<script type="text/javascript" src="popup.js"></script>
+</body>
+</html>
